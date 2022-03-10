@@ -3,6 +3,9 @@ export default function (secretWord, guess) {
     let array1 = secretWord.toUpperCase().split("");
     let array2 = guess.toUpperCase().split("");
 
+    console.log(array1);
+    console.log(array2);
+
     let answerArray = array2.map(item => (
         {
             letter: item,
@@ -21,17 +24,16 @@ export default function (secretWord, guess) {
         }
     }
     for (let i = 0; i < array2.length; i++) {
-        if (array1.includes(array2[i])) {
-            for (let j = 0; j < array2.length; j++) {
-                if (array1[j] === array2[i])
-                    array1[j] = "?";
+        for (let j = 0; j < array2.length; j++) {
+            if (array1[j] === array2[i]) {
+                array1[j] = "?";
+                answerArray.splice([i], 1, {
+                    letter: array2[i],
+                    result: " missplaced"
+                })
+                array2[i] = "&"
             }
-            answerArray.splice([i], 1, {
-                letter: array2[i],
-                result: " missplaced"
-            })
         }
     }
     return answerArray;
 }
-
