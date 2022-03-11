@@ -119,7 +119,16 @@ test("4: function gives the correct response if the secret word is lowercased an
     expect(response).toEqual(expectedResponse);
 })
 
-test("5: Richards test example from the assignment", () => {
+test("5: function gives error response if the two words does not have the same length", () => {
+    let response = checkWord("cykla", "cyklar");
+
+    let expectedResponse = "error, the guess has to be the same length as the secret word (5)";
+
+
+    expect(response).toEqual(expectedResponse);
+})
+
+test("6: Richards test example from the assignment", () => {
     let response = checkWord("cykla", "hallå");
 
     let expectedResponse = [
