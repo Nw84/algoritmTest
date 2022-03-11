@@ -1,0 +1,26 @@
+{
+  "name": "algoritmtest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "jest": "^27.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nw84/algoritmTest.git"
+  },
+  "author": "Tobias Nordwall",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nw84/algoritmTest/issues"
+  },
+  "homepage": "https://github.com/Nw84/algoritmTest#readme"
+}

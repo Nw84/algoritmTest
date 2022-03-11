@@ -3,9 +3,6 @@ export default function (secretWord, guess) {
     let array1 = secretWord.toUpperCase().split("");
     let array2 = guess.toUpperCase().split("");
 
-    console.log(array1);
-    console.log(array2);
-
     let answerArray = array2.map(item => (
         {
             letter: item,
