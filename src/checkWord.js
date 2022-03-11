@@ -6,7 +6,7 @@ export default function (secretWord, guess) {
     let answerArray = array2.map(item => (
         {
             letter: item,
-            result: " incorrect"
+            result: "incorrect"
         }
     ));
 
@@ -14,7 +14,7 @@ export default function (secretWord, guess) {
         if (array2[i] === array1[i]) {
             answerArray.splice([i], 1, {
                 letter: array2[i],
-                result: " correct"
+                result: "correct"
             })
             array1[i] = "!";
             array2[i] = "&";
@@ -26,7 +26,7 @@ export default function (secretWord, guess) {
                 array1[j] = "?";
                 answerArray.splice([i], 1, {
                     letter: array2[i],
-                    result: " missplaced"
+                    result: "missplaced"
                 })
                 array2[i] = "&"
             }
